@@ -7,11 +7,11 @@ import threading
 # --- Terminal UI helpers ---
 
 def clear_screen():
-    """Clears the terminal screen depending on OS"""
+    
     os.system('cls' if os.name == 'nt' else 'clear')
 
 class Col:
-    """ANSI colors for chill text effects"""
+   
     RESET = "\033[0m"
     BOLD = "\033[1m"
     YELLOW = "\033[33m"
@@ -21,7 +21,7 @@ class Col:
     MAGENTA = "\033[35m"
 
 def slow_print(text, delay=0.02):
-    """Prints text char by char for that dramatic effect"""
+    
     for char in text:
         sys.stdout.write(char)
         sys.stdout.flush()
@@ -29,7 +29,7 @@ def slow_print(text, delay=0.02):
     print()
 
 def animate_dots(count=3, delay=0.35):
-    """Simple loading dots animation"""
+   
     for _ in range(count):
         sys.stdout.write('.')
         sys.stdout.flush()
